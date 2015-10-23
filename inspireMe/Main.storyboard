@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="appMain" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SpringView" customModule="inspireMe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9t-gG-0kp" customClass="SpringView" customModule="inspireMe">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <subviews>
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWr-oX-xmQ" customClass="SpringImageView" customModule="inspireMe">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="578"/>
+                                        <animations/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00v-Sk-TII" customClass="SpringButton" customModule="inspireMe">
+                                        <rect key="frame" x="11" y="520" width="40" height="40"/>
+                                        <animations/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" image="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3qM-2a-An4"/>
+                                            <constraint firstAttribute="width" constant="40" id="oal-Uz-q8e"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="favorite_icon_unsel1"/>
+                                        <connections>
+                                            <action selector="likeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngO-lw-UDe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vWr-oX-xmQ" secondAttribute="trailing" id="5zP-7y-bRc"/>
+                                    <constraint firstItem="vWr-oX-xmQ" firstAttribute="top" secondItem="a9t-gG-0kp" secondAttribute="top" id="8K3-4R-ote"/>
+                                    <constraint firstItem="00v-Sk-TII" firstAttribute="leading" secondItem="a9t-gG-0kp" secondAttribute="leading" constant="11" id="9BW-Pn-6YN"/>
+                                    <constraint firstAttribute="bottom" secondItem="vWr-oX-xmQ" secondAttribute="bottom" constant="2" id="HS1-de-lwF"/>
+                                    <constraint firstItem="vWr-oX-xmQ" firstAttribute="leading" secondItem="a9t-gG-0kp" secondAttribute="leading" id="V3R-NP-ver"/>
+                                    <constraint firstAttribute="bottom" secondItem="00v-Sk-TII" secondAttribute="bottom" constant="20" id="YEs-Tc-DPa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="a9t-gG-0kp" secondAttribute="trailing" id="ODr-b0-V3P"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a9t-gG-0kp" secondAttribute="bottom" id="tIN-b4-wrJ"/>
+                            <constraint firstItem="a9t-gG-0kp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yNC-Kn-urC"/>
+                            <constraint firstItem="a9t-gG-0kp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zC5-Gr-ZzT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="likeButton" destination="00v-Sk-TII" id="Oyr-cW-TnN"/>
+                        <outlet property="myImageView" destination="vWr-oX-xmQ" id="YRX-HG-WUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2459" y="-882"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="JA0-zN-6SP">
+            <objects>
+                <viewController storyboardIdentifier="appInfo" id="2WI-Yo-Cnt" customClass="InfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KsY-et-kGu"/>
+                        <viewControllerLayoutGuide type="bottom" id="okE-7t-I8Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXN-Y1-bgy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noo-Eo-Vab" customClass="SpringLabel" customModule="inspireMe" customModuleProvider="target">
+                                <rect key="frame" x="273" y="60" width="55" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="1TR-up-alG"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="weE-6F-Kzd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="ZoomIn"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzJ-gS-YG5" customClass="SpringButton" customModule="inspireMe" customModuleProvider="target">
+                                <rect key="frame" x="10" y="20" width="70" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInLeft"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="x">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="uJj-d6-rfU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20Z-xk-DUw">
+                                <rect key="frame" x="20" y="89" width="560" height="431"/>
+                                <animations/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Noo-Eo-Vab" firstAttribute="centerX" secondItem="cXN-Y1-bgy" secondAttribute="centerX" id="2s7-WY-oQB"/>
+                            <constraint firstItem="okE-7t-I8Y" firstAttribute="top" secondItem="20Z-xk-DUw" secondAttribute="bottom" constant="36" id="8SD-up-mLA"/>
+                            <constraint firstItem="20Z-xk-DUw" firstAttribute="leading" secondItem="cXN-Y1-bgy" secondAttribute="leadingMargin" id="TEU-ZV-q38"/>
+                            <constraint firstItem="Noo-Eo-Vab" firstAttribute="top" secondItem="KsY-et-kGu" secondAttribute="bottom" constant="40" id="VY8-NV-LWI"/>
+                            <constraint firstItem="20Z-xk-DUw" firstAttribute="centerX" secondItem="Noo-Eo-Vab" secondAttribute="centerX" id="Wse-jE-tm7"/>
+                            <constraint firstItem="20Z-xk-DUw" firstAttribute="top" secondItem="Noo-Eo-Vab" secondAttribute="bottom" constant="8" symbolic="YES" id="et8-ba-5Jq"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myTextView" destination="20Z-xk-DUw" id="g1b-hI-4js"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cT-mR-Mag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1735" y="-882"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="favorite_icon_unsel1" width="117" height="120"/>
+    </resources>
+</document>
